@@ -1,16 +1,13 @@
-/* Basic reset: removes default margins */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Smooth scrolling behavior */
 html {
     scroll-behavior: smooth;
 }
 
-/* General body settings: Font and dark background */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #1e1e24;
@@ -18,25 +15,23 @@ body {
     line-height: 1.6;
 }
 
-/* Central container to limit content width */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Link styles: no underline and white color */
 a {
     text-decoration: none;
     color: #f5f5f5;
     transition: 0.3s;
 }
 
-/* --- NAVIGATION BAR --- */
+/* --- HEADER & NAV --- */
 header {
     background-color: #2b2b36;
     padding: 20px 0;
-    position: sticky; /* Fixed at the top when scrolling */
+    position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #333;
@@ -67,7 +62,7 @@ nav a:hover {
     color: #00d4ff;
 }
 
-/* --- HERO SECTION (WELCOME) --- */
+/* --- HERO SECTION --- */
 .hero {
     padding: 100px 0;
     display: flex;
@@ -105,13 +100,10 @@ nav a:hover {
     max-width: 500px;
 }
 
-/* Photo Configuration: 220x300 with oval shape */
 .hero-img {
     width: 220px;
     height: 300px;
-    
     border-radius: 50%;
-    
     border: 4px solid #00d4ff;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), 
                 0 0 40px rgba(0, 212, 255, 0.2);
@@ -127,11 +119,10 @@ nav a:hover {
 .hero-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fits image without distortion */
+    object-fit: cover;
     object-position: center top;
 }
 
-/* Main Blue Button */
 .btn {
     display: inline-block;
     background-color: #00d4ff;
@@ -151,7 +142,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* --- CATEGORIES SECTION (CARDS) --- */
+/* --- CATEGORIES --- */
 .section-categories {
     padding: 80px 0;
     background-color: #25252d;
@@ -170,7 +161,6 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-/* Card Design */
 .card {
     background-color: rgba(51, 51, 63, 0.7);
     backdrop-filter: blur(10px);
@@ -222,7 +212,7 @@ nav a:hover {
     color: #1e1e24;
 }
 
-/* --- LISTS AND DETAIL SECTIONS --- */
+/* --- PROJECTS & SKILLS --- */
 .section-detail {
     padding: 80px 0;
     border-top: 1px solid #333;
@@ -237,7 +227,6 @@ nav a:hover {
     gap: 15px;
 }
 
-/* Project Item in the list */
 .project-item {
     background-color: rgba(43, 43, 54, 0.8);
     padding: 25px 30px;
@@ -272,27 +261,6 @@ nav a:hover {
     max-width: 650px;
 }
 
-/* View Code Button (Github) */
-.btn-repo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 2px solid #555;
-    color: #ccc;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-.btn-repo:hover {
-    border-color: #00d4ff;
-    color: #00d4ff;
-    background-color: rgba(0, 212, 255, 0.1);
-}
-
-/* Vertical Skills List */
 .skill-list {
     list-style: none;
     margin-top: 20px;
@@ -319,7 +287,7 @@ nav a:hover {
     transform: translateX(10px);
 }
 
-/* Footer */
+/* --- FOOTER --- */
 footer {
     padding: 60px 0;
     text-align: center;
@@ -353,10 +321,53 @@ footer h3 {
     font-size: 0.9rem;
 }
 
-/* --- MOBILE RESPONSIVE --- */
+/* --- PROJECT BUTTONS --- */
+.btn-repo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #555;
+    color: #ccc;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.project-item .link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.project-item .link a {
+    width: 150px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.project-item .link a:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 768px) {
     header {
-        position: relative; /* Normal menu flow */
+        position: relative;
         padding: 10px 0;
     }
 
@@ -388,7 +399,7 @@ footer h3 {
     }
 
     .hero-container {
-        flex-direction: column-reverse; /* Photo on top for mobile */
+        flex-direction: column-reverse;
         text-align: center;
         gap: 30px;
     }
@@ -424,55 +435,35 @@ footer h3 {
     
     .project-item {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: center !important;
+        text-align: center;
         padding: 20px;
+        gap: 20px;
     }
 
-    .btn-repo {
+    .project-item .info {
         width: 100%;
-        justify-content: center;
     }
 
-
-
-
-    @media (max-width: 768px) {
-   
-    .project-item {
-        flex-direction: column;
-        align-items: flex-start !important; 
-        gap: 15px;
-    }
-
-   
     .project-item .link {
-        align-items: flex-start !important; 
-        width: 100%; 
+        width: 100%;
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center !important;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-   
     .project-item .link a {
-    
-    width: 150px; 
-    box-sizing: border-box; 
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-
-  
-    padding: 8px 16px;      
-    border: 1px solid #fff;  
-    border-radius: 50px;     
-    color: #fff;           
-    text-decoration: none;   
-    background-color: transparent;
-    transition: all 0.3s ease;
-
-
-
-    
-
-    
+        width: 150px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 !important;
+        padding: 8px 16px;
+    }
 }
 
