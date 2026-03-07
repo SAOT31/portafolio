@@ -1,487 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Sergio Alejandro Ospina Tabares</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="container navbar">
-            <h1 class="logo">Dev<span>Portfolio</span>.</h1>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+    <!-- ===== HEADER ===== -->
+    <header class="sticky-top py-2" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md container">
+            <a class="navbar-brand logo fw-semibold fs-5" href="#home">Dev<span>Portfolio</span>.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav gap-2 mt-2 mt-md-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
+
+        <!-- ===== HERO ===== -->
         <section id="home" class="hero">
-            <div class="container hero-container">
-                <div class="hero-text">
-                    <h2>Hi, I am <span class="highlight">Sergio Alejandro Ospina Tabares</span></h2>
-                    <p>Software Developer in Training.</p>
-                    <p class="description">
-                        Passionate about technology and clean code. 
-                        Currently building solutions with <strong>Python, HTML, and CSS</strong>.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn">Contact Me</a>
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-md-7 text-center text-md-start">
+                        <h2 class="fw-bold mb-2">
+                            Hi, I am <span class="highlight">Sergio Alejandro Ospina Tabares</span>
+                        </h2>
+                        <p class="fw-semibold mb-3" style="color:var(--cyan); font-size:1.1rem;">
+                            Software Developer in Training
+                        </p>
+                        <p class="mb-4 hero-desc">
+                            Passionate about technology and clean code. Currently building solutions with
+                            <strong>Python, HTML, CSS</strong> and <strong>JavaScript</strong>,
+                            and managing data with <strong>SQL &amp; NoSQL</strong> databases.
+                        </p>
+                        <a href="#contact" class="btn-cyan">Contact Me</a>
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-center">
+                        <figure class="hero-img mb-0">
+                            <img src="foto.jpg" alt="Profile Picture">
+                        </figure>
                     </div>
                 </div>
-                <figure class="hero-img">
-                    <img src="foto.jpg" alt="Profile Picture">
-                </figure>
             </div>
         </section>
 
-        <section id="experience" class="section-detail">
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="section-detail py-5">
             <div class="container">
-                <h3 class="tech-title" style="border-color: #fff; color: #fff;">Experience</h3>
-                <p style="color: #aaa;">Currently in the training stage and developing academic projects.</p>
+                <h3 class="tech-title mb-3" style="color:#fff;">Experience</h3>
+                <p style="color:var(--muted);">Currently in the training stage and developing academic projects.</p>
             </div>
         </section>
 
-        <section id="skills" class="section-detail">
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="section-detail py-5">
             <div class="container">
-                
-                <h3 class="tech-title" style="border-color: #fff; color: #fff; margin-bottom: 20px;">
-                    <i class="fa-solid fa-user-tie"></i> Soft Skills
-                </h3>
-                
-                <div class="profile-content" style="max-width: 800px; color: #ccc; font-size: 1.05rem; line-height: 1.8; margin-bottom: 60px;">
-                    <p style="margin-bottom: 15px;">
-                        I consider myself a <strong>proactive and goal-oriented person</strong>, with a high sense of responsibility and seriousness. I am analytical by nature; I acquire and share knowledge easily, always looking to provide innovative solutions.
-                    </p>
-                    <p>
-                        I adapt easily to teamwork environments, contributing to the <strong>optimization of processes</strong>. I have the ability to plan and prioritize tasks, maintaining a <strong>positive attitude</strong> and willingness to learn.
-                    </p>
+                <h3 class="tech-title mb-4" style="color:#fff;"><i class="fa-solid fa-user-tie"></i> Soft Skills</h3>
+                <div class="mb-5" style="max-width:800px; color:#ccc; font-size:1.05rem; line-height:1.8;">
+                    <p class="mb-3">I consider myself a <strong>proactive and goal-oriented person</strong>, with a high
+                        sense of
+                        responsibility and seriousness. I am analytical by nature; I acquire and share knowledge easily,
+                        always looking to provide innovative solutions.</p>
+                    <p>I adapt easily to teamwork environments, contributing to the <strong>optimization of
+                            processes</strong>.
+                        I have the ability to plan and prioritize tasks, maintaining a <strong>positive
+                            attitude</strong> and willingness to learn.</p>
                 </div>
-
-                <h3 class="tech-title" style="border-color: #fff; color: #fff;">
-                    <i class="fa-solid fa-code"></i> Hard Skills
-                </h3>
-                
-                <ul class="skill-list">
-                    <li><i class="fa-solid fa-check"></i> Python (Basic)</li>
-                    <li><i class="fa-solid fa-check"></i> HTML & CSS (Basic)</li>
-                    <li><i class="fa-solid fa-check"></i> Programming Logic</li>
-                    <li><i class="fa-solid fa-check"></i> Git / GitHub (Beginner)</li>
-                    <li><i class="fa-solid fa-check"></i> VS Code (Basic Handling)</li>
-                    <li><i class="fa-solid fa-check"></i> English (Basic - In training)</li>
+                <h3 class="tech-title mb-4" style="color:#fff;"><i class="fa-solid fa-code"></i> Hard Skills</h3>
+                <ul class="skill-list ps-2">
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Python (Basic)
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> HTML &amp; CSS
+                        (Basic)</li>
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Programming Logic
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Git / GitHub
+                        (Beginner)</li>
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> VS Code (Basic
+                        Handling)</li>
+                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> English (Basic -
+                        In training)</li>
                 </ul>
-
             </div>
         </section>
 
-        <section id="projects" class="section-categories">
-            <div class="container">
-                <h3>My Projects</h3>
-                <div class="grid-categories">
-                    <article class="card">
-                        <div class="card-icon"><i class="fa-brands fa-python"></i></div>
-                        <h4>Python</h4>
-                        <p>Basic task automation and conditional logic.</p>
-                        <a href="#list-python" class="btn-small">View List <i class="fa-solid fa-arrow-down"></i></a>
+        <!-- ===== PROJECTS CATEGORIES ===== -->
+        <section id="projects" class="section-categories py-5">
+            <div class="container text-center">
+                <h3 class="fs-2 mb-5">My Projects</h3>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <article class="card-custom p-4 text-center">
+                        <div class="card-icon mb-3"><i class="fa-brands fa-python"></i></div>
+                        <h4 class="fs-5 mb-3">Python</h4>
+                        <p style="color:var(--muted);" class="mb-4">Basic task automation and conditional logic.</p>
+                        <a href="#list-python" class="btn-outline-cyan">View List <i
+                                class="fa-solid fa-arrow-down"></i></a>
                     </article>
-                    <article class="card">
-                        <div class="card-icon"><i class="fa-brands fa-html5"></i></div>
-                        <h4>HTML & CSS</h4>
-                        <p>Semantic structure and modern design with pure CSS.</p>
-                        <a href="#list-web" class="btn-small">View List <i class="fa-solid fa-arrow-down"></i></a>
+                    <article class="card-custom p-4 text-center">
+                        <div class="card-icon mb-3"><i class="fa-brands fa-html5"></i></div>
+                        <h4 class="fs-5 mb-3">HTML &amp; CSS</h4>
+                        <p style="color:var(--muted);" class="mb-4">Semantic structure and modern design with pure CSS.
+                        </p>
+                        <a href="#list-web" class="btn-outline-cyan">View List <i
+                                class="fa-solid fa-arrow-down"></i></a>
                     </article>
-                    <article class="card">
-                        <div class="card-icon"><i class="fa-brands fa-js"></i></div>
-                        <h4>JavaScript</h4>
-                        <p>Coming Soon.</p>
-                        <a href="#list-js" class="btn-small">View List <i class="fa-solid fa-arrow-down"></i></a>
+                    <article class="card-custom p-4 text-center">
+                        <div class="card-icon mb-3"><i class="fa-brands fa-js"></i></div>
+                        <h4 class="fs-5 mb-3">JavaScript</h4>
+                        <p style="color:var(--muted);" class="mb-4">Coming Soon.</p>
+                        <a href="#list-js" class="btn-outline-cyan">View List <i class="fa-solid fa-arrow-down"></i></a>
+                    </article>
+                    <article class="card-custom p-4 text-center">
+                        <div class="card-icon mb-3"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="fs-5 mb-3">Databases</h4>
+                        <p style="color:var(--muted);" class="mb-4">SQL and NoSQL database projects.</p>
+                        <a href="#list-databases" class="btn-outline-cyan">View List <i
+                                class="fa-solid fa-arrow-down"></i></a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="list-python" class="section-detail">
+        <!-- ===== PYTHON PROJECTS ===== -->
+        <section id="list-python" class="section-detail py-5">
             <div class="container">
-                <h3 class="tech-title"><i class="fa-brands fa-python"></i> Python Projects</h3>
-                
-                <article class="project-item">
+                <h3 class="tech-title mb-4"><i class="fa-brands fa-python"></i> Python Projects</h3>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>Python Control Flow Exercises</h4>
-                        <p>Basic Exercises.</p>
+                        <h4 class="mb-2">Python Control Flow Exercises</h4>
+                        <p class="mb-0">Basic Exercises.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Ejercicios-de-Control-de-Flujo-en-Python" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/SAOT31/Ejercicios-de-Control-de-Flujo-en-Python" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>Ecoride</h4>
-                        <p>Sustainable bike rental simulator.</p>
+                        <h4 class="mb-2">Ecoride</h4>
+                        <p class="mb-0">Sustainable bike rental simulator.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Ecoride" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-                
-                <article class="project-item">
-                    <div class="info">
-                        <h4>CrudActivity - CrudData</h4>
-                        <p>Data Structures in Python.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/CrudActivity-CrudData_Estructuras_de_Datos_en_Python" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Ecoride" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>CrudActivity — Crudzaso Games</h4>
-                        <p>Console minigames line.</p>
+                        <h4 class="mb-2">CrudActivity - CrudData</h4>
+                        <p class="mb-0">Data Structures in Python.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/CrudActivity-Crudzaso-Games" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/SAOT31/CrudActivity-CrudData_Estructuras_de_Datos_en_Python"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>Decisions and Loops in Python</h4>
-                        <p>Application of conditional structures.</p>
+                        <h4 class="mb-2">CrudActivity — Crudzaso Games</h4>
+                        <p class="mb-0">Console minigames line.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Actividad-Decisiones-y-Ciclos-en-Python" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CrudActivity-Crudzaso-Games"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>User Story M1S1</h4>
-                        <p>Fundamentals and basic inventory operations.</p>
+                        <h4 class="mb-2">Decisions and Loops in Python</h4>
+                        <p class="mb-0">Application of conditional structures.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S1" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/SAOT31/Actividad-Decisiones-y-Ciclos-en-Python" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>User Story M1S2</h4>
-                        <p>Flow control and list management in inventory.</p>
+                        <h4 class="mb-2">User Story M1S1</h4>
+                        <p class="mb-0">Fundamentals and basic inventory operations.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S2" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S1"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>User Story M1S3</h4>
-                        <p>Advanced inventory with collections and file persistence.</p>
+                        <h4 class="mb-2">User Story M1S2</h4>
+                        <p class="mb-0">Flow control and list management in inventory.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S3" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S2"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>Galactic Library Keeper</h4>
-                        <p>Interplanetary File Management System.</p>
+                        <h4 class="mb-2">User Story M1S3</h4>
+                        <p class="mb-0">Advanced inventory with collections and file persistence.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Galactic-Library-Keeper-Sistema-de-Gesti-n-de-Archivos-Interplanetarios" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S3"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
-                <article class="project-item">
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
                     <div class="info">
-                        <h4>PeopleOps Vacation Console</h4>
-                        <p>Vacation Management in Python.</p>
+                        <h4 class="mb-2">Galactic Library Keeper</h4>
+                        <p class="mb-0">Interplanetary File Management System.</p>
                     </div>
-                    <div class="link"><a href="https://github.com/SAOT31/PeopleOps-Vacation-Console-Gesti-n-de-Vacaciones-en-Python" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/SAOT31/Galactic-Library-Keeper-Sistema-de-Gesti-n-de-Archivos-Interplanetarios"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">PeopleOps Vacation Console</h4>
+                        <p class="mb-0">Vacation Management in Python.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/SAOT31/PeopleOps-Vacation-Console-Gesti-n-de-Vacaciones-en-Python"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== HTML & CSS PROJECTS ===== -->
+        <section id="list-web" class="section-detail py-5">
+            <div class="container">
+                <h3 class="tech-title mb-4"><i class="fa-brands fa-html5"></i> HTML &amp; CSS Projects</h3>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">WorldHub - Crisis in the Atlas</h4>
+                        <p class="mb-0">Contribution: Rotating cards of the 13 knights with descriptions.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a
+                            href="https://github.com/JoseRivera-07/Arthur-s-Kingdom/tree/main" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">CRUDScope HTML MediaPanel</h4>
+                        <p class="mb-0">Static HTML page simulating a CRUD system panel.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CRUDScope-HTML-MediaPanel"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">Mini OS</h4>
+                        <p class="mb-0">Desktop simulation on a single web page.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/estiven-piedrahita/team-mocha"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">User Story M2S1</h4>
+                        <p class="mb-0">Creation of a personal portfolio with a pets page.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S1"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">User Story M2S2</h4>
+                        <p class="mb-0">CSS Flexbox and CSS Grid Layout practice.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S2"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">User Story M2S3</h4>
+                        <p class="mb-0">Media queries, responsive design, and optimization.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S3"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">CRUDactivity-StoreCrud</h4>
+                        <p class="mb-0">https://saot31.github.io/CRUDactivity-StoreCrud/</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CRUDactivity-StoreCrud"
+                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== JAVASCRIPT PROJECTS ===== -->
+        <section id="list-js" class="section-detail py-5">
+            <div class="container">
+                <h3 class="tech-title mb-4"><i class="fa-brands fa-js"></i> JavaScript Projects</h3>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">TaskFlow</h4>
+                        <p class="mb-0">Collaborative task manager.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/CamiloGuengue/next-task/tree/master" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a>
+                        <a href="https://camiloguengue.github.io/next-task/" class="btn-repo" target="_blank">View Demo
+                            <i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">W1-JS.md</h4>
+                        <p class="mb-0">JavaScript Syntax and Logic Lab.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/W1-JS.md" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/W1-JS.md/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">Act2-Js.md</h4>
+                        <p class="mb-0">CRUDLab – Interactive simulator in JavaScript.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/Act2-Js" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/Act2-Js/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">crudactivity lab 1</h4>
+                        <p class="mb-0">Training Lab Check-in.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/crudactivity-lab-1" class="btn-repo" target="_blank">View
+                            Code <i class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/crudactivity-lab-1/" class="btn-repo" target="_blank">View
+                            Demo <i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">crudactivity lab 2</h4>
+                        <p class="mb-0">Training Lab Check-in.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/crudactivity-lab-2" class="btn-repo" target="_blank">View
+                            Code <i class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/crudactivity-lab-2/" class="btn-repo" target="_blank">View
+                            Demo <i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">M3S1</h4>
+                        <p class="mb-0">Interactive messaging system.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/M3S1" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/M3S1/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">M3S2</h4>
+                        <p class="mb-0">Data management with objects, Sets, and Maps in JavaScript.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/M3S2" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">M3S3</h4>
+                        <p class="mb-0">Dynamic DOM management with browser persistence.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/M3S3" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/M3S3/manipulacion_dom.html" class="btn-repo"
+                            target="_blank">View Demo <i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">M3S4</h4>
+                        <p class="mb-0">Development of a comprehensive mini web application with persistence and API
+                            consumption</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/M3S4" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/M3S4/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">Crunchyroll-Replica</h4>
+                        <p class="mb-0">Landing, Auth, Profiles and Home.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/crunchyroll-replica-js/tree/main" class="btn-repo"
+                            target="_blank">View Code <i class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/crunchyroll-replica-js" class="btn-repo" target="_blank">View
+                            Demo <i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">HabitFlow</h4>
+                        <p class="mb-0">Internal habit tracking system.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/HabitFlow" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/HabitFlow/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">Simulacrum</h4>
+                        <p class="mb-0">Web-based order management system (restaurant)</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://github.com/SAOT31/Simulacrum" class="btn-repo" target="_blank">View Code <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://saot31.github.io/Simulacrum/" class="btn-repo" target="_blank">View Demo <i
+                                class="fa-solid fa-globe"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== DATABASES PROJECTS ===== -->
+        <section id="list-databases" class="section-detail py-5">
+            <div class="container">
+                <h3 class="tech-title mb-4"><i class="fa-solid fa-database"></i> Databases Projects</h3>
+
+                <article
+                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
+                    <div class="info">
+                        <h4 class="mb-2">Database schema design</h4>
+                        <p class="mb-2">Design a relational database schema in PostgreSQL.</p>
+                        <div class="db-badges"><span class="badge-db badge-postgres">PostgreSQL</span></div>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Database-schema-design" class="btn-repo"
+                            target="_blank">View Code
+                            <i class="fa-brands fa-github"></i></a></div>
                 </article>
 
             </div>
         </section>
-
-        <section id="list-web" class="section-detail">
-            <div class="container">
-                <h3 class="tech-title"><i class="fa-brands fa-html5"></i> HTML & CSS Projects</h3>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>WorldHub - Crisis in the Atlas</h4>
-                        <p>Contribution: Rotating cards of the 13 knights with descriptions.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/JoseRivera-07/Arthur-s-Kingdom/tree/main" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>CRUDScope HTML MediaPanel</h4>
-                        <p>Static HTML page simulating a CRUD system panel.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/CRUDScope-HTML-MediaPanel" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>Mini OS</h4>
-                        <p>Desktop simulation on a single web page.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/estiven-piedrahita/team-mocha" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>User Story M2S1</h4>
-                        <p>Creation of a personal portfolio with a pets page.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S1" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>User Story M2S2</h4>
-                        <p>CSS Flexbox and CSS Grid Layout practice.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S2" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>User Story M2S3</h4>
-                        <p>Media queries, responsive design, and optimization.</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S3" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article class="project-item">
-                    <div class="info">
-                        <h4>CRUDactivity-StoreCrud</h4>
-                     <p>https://saot31.github.io/CRUDactivity-StoreCrud/</p>
-                    </div>
-                    <div class="link"><a href="https://github.com/SAOT31/CRUDactivity-StoreCrud" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-                
-            </div>
-        </section>
-
-        <section id="list-js" class="section-detail">
-            <div class="container">
-                <h3 class="tech-title"><i class="fa-brands fa-js"></i> JavaScript Projects</h3>
-                
-        <article class="project-item">
-    <div class="info">
-        <h4>TaskFlow</h4>
-        <p>Collaborative task manager.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/CamiloGuengue/next-task/tree/master" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://camiloguengue.github.io/next-task/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-
-        <article class="project-item">
-    <div class="info">
-        <h4>W1-JS.md</h4>
-        <p>JavaScript Syntax and Logic Lab.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/W1-JS.md" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/W1-JS.md/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-
-        <article class="project-item">
-    <div class="info">
-        <h4>Act2-Js.md</h4>
-        <p>CRUDLab – Interactive simulator in JavaScript.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/Act2-Js" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/Act2-Js/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-
- <article class="project-item">
-    <div class="info">
-        <h4>crudactivity lab 1</h4>
-        <p>Training Lab Check-in.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/crudactivity-lab-1" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/crudactivity-lab-1/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-
-<article class="project-item">
-    <div class="info">
-        <h4>crudactivity lab 2</h4>
-        <p>Training Lab Check-in.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/crudactivity-lab-2" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/crudactivity-lab-2/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-      
-    <article class="project-item">
-    <div class="info">
-        <h4>M3S1</h4>
-        <p>Interactive messaging system.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/M3S1" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/M3S1/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a
-    </div>
-</article>
-
-<article class="project-item">
-    <div class="info">
-        <h4>M3S2</h4>
-        <p>Data management with objects, Sets, and Maps in JavaScript.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/M3S2" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        
-    </div>
-</article>
-
-<article class="project-item">
-    <div class="info">
-        <h4>M3S3</h4>
-        <p>Dynamic DOM management with browser persistence.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/M3S3" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/M3S3/manipulacion_dom.html" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-       </a>
-    </div>
-</article>
-
-<article class="project-item">
-    <div class="info">
-        <h4>M3S4</h4>
-        <p>Development of a comprehensive mini web application with persistence and API consumption</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/M3S4" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/M3S4/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-       </a>
-    </div>
-</article>
-                
-<article class="project-item">
-    <div class="info">
-        <h4>Crunchyroll-Replica</h4>
-        <p>Landing, Auth, Profiles and Home.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/crunchyroll-replica-js/tree/main" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/crunchyroll-replica-js" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-</article>
-
-
-<article class="project-item">
-    <div class="info">
-        <h4>HabitFlow</h4>
-        <p>Internal habit tracking system.</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/HabitFlow" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/HabitFlow/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-</article>
-
-
-<article class="project-item">
-    <div class="info">
-        <h4>Simulacrum</h4>
-        <p>Web-based order management system (restaurant)</p>
-    </div>
-    <div class="link"> 
-        <a href="https://github.com/SAOT31/Simulacrum" class="btn-repo" target="_blank">
-            View Code <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://saot31.github.io/Simulacrum/" class="btn-repo" target="_blank">
-            View Demo <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-        </section>
-     
-      
-
-        
 
     </main>
 
-    <footer id="contact">
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact" class="py-5 text-center">
         <div class="container">
-            <h3>Contact</h3>
-            <div class="social-icons">
+            <h3 class="mb-4">Contact</h3>
+            <div class="social-icons d-flex justify-content-center gap-4 my-4">
                 <a href="https://github.com/SAOT31" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sergio-alejandro-ospina-tabares-834913212/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/sergio-alejandro-ospina-tabares-834913212/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="mailto:sergio.ospinata@amigo.edu.co"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p class="copyright">&copy; 2025 Created by Sergio Alejandro Ospina Tabares.</p>
+            <p class="copyright mb-0">&copy; 2025 Created by Sergio Alejandro Ospina Tabares.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
