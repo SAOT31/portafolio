@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import Particles from "@tsparticles/react";
+import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 export const ParticlesBackground = () => {
@@ -101,11 +101,12 @@ export const ParticlesBackground = () => {
     };
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={options}
-      className="absolute inset-0 z-0 pointer-events-auto"
-    />
+    <ParticlesProvider init={particlesInit}>
+      <Particles
+        id="tsparticles"
+        options={options}
+        className="absolute inset-0 z-0 pointer-events-auto"
+      />
+    </ParticlesProvider>
   );
 };
