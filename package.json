@@ -11,13 +11,12 @@
   },
   "dependencies": {
     "@tsparticles/react": "^4.3.1",
+    "@tsparticles/slim": "^4.3.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-parallax-tilt": "^1.7.333",
-    "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
-    "tsparticles": "^4.3.1",
-    "tsparticles-slim": "^2.12.0"
+    "tsparticles": "^4.3.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
