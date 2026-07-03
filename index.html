@@ -1,789 +1,436 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Sergio Alejandro Ospina Tabares</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- ===== HEADER ===== -->
-    <header class="sticky-top py-2" data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md container">
-            <a class="navbar-brand logo fw-semibold fs-5" href="#home">Dev<span>Portfolio</span>.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                <ul class="navbar-nav gap-2 mt-2 mt-md-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- ===== HERO ===== -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="row align-items-center gy-4">
-                    <div class="col-md-7 text-center text-md-start">
-                        <h2 class="fw-bold mb-2">
-                            Hi, I am <span class="highlight">Sergio Alejandro Ospina Tabares</span>
-                        </h2>
-                        <p class="fw-semibold mb-3" style="color:var(--cyan); font-size:1.1rem;">
-                            Software Developer in Training
-                        </p>
-                        <p class="mb-4 hero-desc">
-                            Passionate about technology and clean code. Currently building solutions with
-                            <strong>Python, HTML, CSS</strong> and <strong>JavaScript</strong>,
-                            and managing data with <strong>SQL &amp; NoSQL</strong> databases.
-                        </p>
-                        <a href="#contact" class="btn-cyan">Contact Me</a>
-                    </div>
-                    <div class="col-md-5 d-flex justify-content-center">
-                        <figure class="hero-img mb-0">
-                            <img src="foto.jpg" alt="Profile Picture">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== EXPERIENCE ===== -->
-        <section id="experience" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-3" style="color:#fff;">Experience</h3>
-                <p style="color:var(--muted);">Currently in the training stage and developing academic projects.</p>
-            </div>
-        </section>
-
-        <!-- ===== SKILLS ===== -->
-        <section id="skills" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4" style="color:#fff;"><i class="fa-solid fa-user-tie"></i> Soft Skills</h3>
-                <div class="mb-5" style="max-width:800px; color:#ccc; font-size:1.05rem; line-height:1.8;">
-                    <p class="mb-3">I consider myself a <strong>proactive and goal-oriented person</strong>, with a high
-                        sense of
-                        responsibility and seriousness. I am analytical by nature; I acquire and share knowledge easily,
-                        always looking to provide innovative solutions.</p>
-                    <p>I adapt easily to teamwork environments, contributing to the <strong>optimization of
-                            processes</strong>.
-                        I have the ability to plan and prioritize tasks, maintaining a <strong>positive
-                            attitude</strong> and willingness to learn.</p>
-                </div>
-                <h3 class="tech-title mb-4" style="color:#fff;"><i class="fa-solid fa-code"></i> Hard Skills</h3>
-                <ul class="skill-list ps-2">
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Python (Basic)
-                    </li>
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> HTML &amp; CSS
-                        (Basic)</li>
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Programming Logic
-                    </li>
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> Git / GitHub
-                        (Beginner)</li>
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> VS Code (Basic
-                        Handling)</li>
-                    <li class="mb-3 d-flex align-items-center gap-3"><i class="fa-solid fa-check"></i> English (Basic -
-                        In training)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ===== PROJECTS CATEGORIES ===== -->
-        <section id="projects" class="section-categories py-5">
-            <div class="container text-center">
-                <h3 class="fs-2 mb-5">My Projects</h3>
-                <div class="d-flex flex-wrap justify-content-center gap-4">
-                    <article class="card-custom p-4 text-center">
-                        <div class="card-icon mb-3"><i class="fa-brands fa-python"></i></div>
-                        <h4 class="fs-5 mb-3">Python</h4>
-                        <p style="color:var(--muted);" class="mb-4">Basic task automation and conditional logic.</p>
-                        <a href="#list-python" class="btn-outline-cyan">View List <i
-                                class="fa-solid fa-arrow-down"></i></a>
-                    </article>
-                    <article class="card-custom p-4 text-center">
-                        <div class="card-icon mb-3"><i class="fa-brands fa-html5"></i></div>
-                        <h4 class="fs-5 mb-3">HTML &amp; CSS</h4>
-                        <p style="color:var(--muted);" class="mb-4">Semantic structure and modern design with pure CSS.
-                        </p>
-                        <a href="#list-web" class="btn-outline-cyan">View List <i
-                                class="fa-solid fa-arrow-down"></i></a>
-                    </article>
-                    <article class="card-custom p-4 text-center">
-                        <div class="card-icon mb-3"><i class="fa-brands fa-js"></i></div>
-                        <h4 class="fs-5 mb-3">JavaScript</h4>
-                        <p style="color:var(--muted);" class="mb-4">Coming Soon.</p>
-                        <a href="#list-js" class="btn-outline-cyan">View List <i class="fa-solid fa-arrow-down"></i></a>
-                    </article>
-                    <article class="card-custom p-4 text-center">
-                        <div class="card-icon mb-3"><i class="fa-solid fa-database"></i></div>
-                        <h4 class="fs-5 mb-3">Databases</h4>
-                        <p style="color:var(--muted);" class="mb-4">SQL and NoSQL database projects.</p>
-                        <a href="#list-databases" class="btn-outline-cyan">View List <i
-                                class="fa-solid fa-arrow-down"></i></a>
-                    </article>
-                    <article class="card-custom p-4 text-center">
-                        <div class="card-icon mb-3"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h4 class="fs-5 mb-3">C# &amp; ASP.NET</h4>
-                        <p style="color:var(--muted);" class="mb-4">Backend, web and console applications.</p>
-                        <a href="#list-csharp" class="btn-outline-cyan">View List <i
-                                class="fa-solid fa-arrow-down"></i></a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== PYTHON PROJECTS ===== -->
-        <section id="list-python" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4"><i class="fa-brands fa-python"></i> Python Projects</h3>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Python Control Flow Exercises</h4>
-                        <p class="mb-0">Basic Exercises.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/SAOT31/Ejercicios-de-Control-de-Flujo-en-Python" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Ecoride</h4>
-                        <p class="mb-0">Sustainable bike rental simulator.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Ecoride" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">CrudActivity - CrudData</h4>
-                        <p class="mb-0">Data Structures in Python.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/SAOT31/CrudActivity-CrudData_Estructuras_de_Datos_en_Python"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">CrudActivity — Crudzaso Games</h4>
-                        <p class="mb-0">Console minigames line.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CrudActivity-Crudzaso-Games"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Decisions and Loops in Python</h4>
-                        <p class="mb-0">Application of conditional structures.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/SAOT31/Actividad-Decisiones-y-Ciclos-en-Python" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M1S1</h4>
-                        <p class="mb-0">Fundamentals and basic inventory operations.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S1"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M1S2</h4>
-                        <p class="mb-0">Flow control and list management in inventory.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S2"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M1S3</h4>
-                        <p class="mb-0">Advanced inventory with collections and file persistence.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M1S3"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Galactic Library Keeper</h4>
-                        <p class="mb-0">Interplanetary File Management System.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/SAOT31/Galactic-Library-Keeper-Sistema-de-Gesti-n-de-Archivos-Interplanetarios"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">PeopleOps Vacation Console</h4>
-                        <p class="mb-0">Vacation Management in Python.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/SAOT31/PeopleOps-Vacation-Console-Gesti-n-de-Vacaciones-en-Python"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ===== HTML & CSS PROJECTS ===== -->
-        <section id="list-web" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4"><i class="fa-brands fa-html5"></i> HTML &amp; CSS Projects</h3>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">WorldHub - Crisis in the Atlas</h4>
-                        <p class="mb-0">Contribution: Rotating cards of the 13 knights with descriptions.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a
-                            href="https://github.com/JoseRivera-07/Arthur-s-Kingdom/tree/main" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">CRUDScope HTML MediaPanel</h4>
-                        <p class="mb-0">Static HTML page simulating a CRUD system panel.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CRUDScope-HTML-MediaPanel"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Mini OS</h4>
-                        <p class="mb-0">Desktop simulation on a single web page.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/estiven-piedrahita/team-mocha"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M2S1</h4>
-                        <p class="mb-0">Creation of a personal portfolio with a pets page.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S1"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M2S2</h4>
-                        <p class="mb-0">CSS Flexbox and CSS Grid Layout practice.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S2"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">User Story M2S3</h4>
-                        <p class="mb-0">Media queries, responsive design, and optimization.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/Historia-de-usuario-M2S3"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">CRUDactivity-StoreCrud</h4>
-                        <p class="mb-0">https://saot31.github.io/CRUDactivity-StoreCrud/</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2"><a href="https://github.com/SAOT31/CRUDactivity-StoreCrud"
-                            class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a></div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ===== JAVASCRIPT PROJECTS ===== -->
-        <section id="list-js" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4"><i class="fa-brands fa-js"></i> JavaScript Projects</h3>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">TaskFlow</h4>
-                        <p class="mb-0">Collaborative task manager.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/CamiloGuengue/next-task/tree/master" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                        <a href="https://camiloguengue.github.io/next-task/" class="btn-repo" target="_blank">View Demo
-                            <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">W1-JS.md</h4>
-                        <p class="mb-0">JavaScript Syntax and Logic Lab.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/W1-JS.md" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/W1-JS.md/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Act2-Js.md</h4>
-                        <p class="mb-0">CRUDLab – Interactive simulator in JavaScript.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/Act2-Js" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/Act2-Js/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">crudactivity lab 1</h4>
-                        <p class="mb-0">Training Lab Check-in.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/crudactivity-lab-1" class="btn-repo" target="_blank">View
-                            Code <i class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/crudactivity-lab-1/" class="btn-repo" target="_blank">View
-                            Demo <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">crudactivity lab 2</h4>
-                        <p class="mb-0">Training Lab Check-in.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/crudactivity-lab-2" class="btn-repo" target="_blank">View
-                            Code <i class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/crudactivity-lab-2/" class="btn-repo" target="_blank">View
-                            Demo <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M3S1</h4>
-                        <p class="mb-0">Interactive messaging system.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M3S1" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/M3S1/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M3S2</h4>
-                        <p class="mb-0">Data management with objects, Sets, and Maps in JavaScript.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M3S2" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M3S3</h4>
-                        <p class="mb-0">Dynamic DOM management with browser persistence.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M3S3" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/M3S3/manipulacion_dom.html" class="btn-repo"
-                            target="_blank">View Demo <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M3S4</h4>
-                        <p class="mb-0">Development of a comprehensive mini web application with persistence and API
-                            consumption</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M3S4" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/M3S4/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Crunchyroll-Replica</h4>
-                        <p class="mb-0">Landing, Auth, Profiles and Home.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/crunchyroll-replica-js/tree/main" class="btn-repo"
-                            target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/crunchyroll-replica-js" class="btn-repo" target="_blank">View
-                            Demo <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">HabitFlow</h4>
-                        <p class="mb-0">Internal habit tracking system.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/HabitFlow" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/HabitFlow/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Simulacrum</h4>
-                        <p class="mb-0">Web-based order management system (restaurant)</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/Simulacrum" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://saot31.github.io/Simulacrum/" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ===== DATABASES PROJECTS ===== -->
-        <section id="list-databases" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4"><i class="fa-solid fa-database"></i> Databases Projects</h3>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Database schema design</h4>
-                        <p class="mb-0">Design a relational database schema in PostgreSQL.</p>
-                        <div class="db-badges"><span class="badge-db badge-postgres">PostgreSQL</span></div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/Database-schema-design" class="btn-repo"
-                            target="_blank">ViewCode <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M4S1</h4>
-                        <p class="mb-0">Conceptual and logical design of the database.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M3S1" class="btn-repo" target="_blank">ViewCode <i
-                                class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M4S2</h4>
-                        <p class="mb-0">Design and consultation of an Academic System in SQL.</p>
-                        <div class="db-badges"><span class="badge-db badge-sql">SQL</span><span
-                                class="badge-db badge-mysql">MySQL</span></div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M4S2n" class="btn-repo" target="_blank">ViewCode <i
-                                class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M4S3</h4>
-                        <p class="mb-0">Content and user management in MongoDB.</p>
-                        <div class="db-badges"><span class="badge-db badge-nosql">NoSQL</span><span
-                                class="badge-db badge-mongo">MongoDB</span></div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M4S3" class="btn-repo" target="_blank">ViewCode <i
-                                class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Delivery Ops</h4>
-                        <p class="mb-0">Internal module called Cruzado Delivery Ops (CDO) to manage marketplace ordersL.
-                        </p>
-                        <div class="db-badges"><span class="badge-db badge-sql">SQL</span><span
-                                class="badge-db badge-postgres">PostgreSQL</span></div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/Delivery-Ops" class="btn-repo" target="_blank">ViewCode <i
-                                class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-
-
-
-
-
-
-            </div>
-        </section>
-
-        <!-- ===== C# & ASP.NET PROJECTS ===== -->
-        <section id="list-csharp" class="section-detail py-5">
-            <div class="container">
-                <h3 class="tech-title mb-4"><i class="fa-solid fa-laptop-code"></i> C# &amp; ASP.NET Projects</h3>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M5.3S1</h4>
-                        <p class="mb-0">Basic registration of patients and pets</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M5.3S1" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M5.3S2</h4>
-                        <p class="mb-0">Collections management and queries with LINQ</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M5.3S2" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M5.3S3</h4>
-                        <p class="mb-0">Inheritance and polymorphism in the clinic system</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M5.3S3" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M5.3S4</h4>
-                        <p class="mb-0">Use of interfaces, debugging, and exception handling</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M5.3S4" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">M5.3S5</h4>
-                        <p class="mb-0">Asynchronous programming and coding conventions</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/M5.3S5" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Logic &amp; Data Structures Evaluator</h4>
-                        <p class="mb-0">Interactive C# console tool for assessing technical skills and OOP fundamentals.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/actividad-1-csharp.git" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Theme Event Management System</h4>
-                        <p class="mb-0">Full Stack platform for complete event lifecycle management (CRUD) with a modern UI.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/activity-events.git" class="btn-repo" target="_blank">View Code <i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://sergio.andrescortes.dev" class="btn-repo" target="_blank">View Demo <i
-                                class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Library System</h4>
-                        <p class="mb-0">Admin interface for managing users, books, and book loans.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/LibrarySystem" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                        <a href="https://bookstore.sergio.andrescortes.dev/" class="btn-repo" target="_blank">View Demo <i class="fa-solid fa-globe"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Veterinary System</h4>
-                        <p class="mb-0">C# system to organize and optimize veterinary clinical operations.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/VeterinarySystem" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">NeoGenesis Park Dinosaur Registry</h4>
-                        <p class="mb-0">Management system to register and track dinosaurs using EF Core and LINQ.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/Hubble-C/NeoGenesis" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Space Exploration Management</h4>
-                        <p class="mb-0">Complete system using C#, LINQ, and EF Core to manage interplanetary missions.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/Space-Exploration-Management-System" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Transport Operations System</h4>
-                        <p class="mb-0">Console system to manage daily transport operations, vehicles, and drivers.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/TransportSystem" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">Sports Complex System</h4>
-                        <p class="mb-0">Reservation management system avoiding schedule conflicts with EF Core and POO.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/SAOT31/SportsComplexSystem" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-                <article
-                    class="project-item d-flex flex-column flex-md-row justify-content-between align-items-md-center p-4 mb-3 gap-3">
-                    <div class="info">
-                        <h4 class="mb-2">NextInLine Turn Management System</h4>
-                        <p class="mb-0">Complete system for queue management with waiting room, advisor interface, and sequential flow control.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="https://github.com/Hubble-C/NextInLine" class="btn-repo" target="_blank">View Code <i class="fa-brands fa-github"></i></a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer id="contact" class="py-5 text-center">
-        <div class="container">
-            <h3 class="mb-4">Contact</h3>
-            <div class="social-icons d-flex justify-content-center gap-4 my-4">
-                <a href="https://github.com/SAOT31" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sergio-alejandro-ospina-tabares-834913212/" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:sergio.ospinata@amigo.edu.co"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <p class="copyright mb-0">&copy; 2025 Created by Sergio Alejandro Ospina Tabares.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+                        "surface-container-lowest": "var(--color-surface-container-lowest)",
+                        "surface-bright": "var(--color-surface-bright)",
+                        "primary": "var(--color-primary)",
+                        "on-background": "var(--color-on-background)",
+                        "tertiary-fixed": "var(--color-tertiary-fixed)",
+                        "surface-container-high": "var(--color-surface-container-high)",
+                        "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+                        "on-primary": "var(--color-on-primary)",
+                        "surface": "var(--color-surface)",
+                        "on-error": "var(--color-on-error)",
+                        "surface-variant": "var(--color-surface-variant)",
+                        "on-primary-fixed": "var(--color-on-primary-fixed)",
+                        "inverse-surface": "var(--color-inverse-surface)",
+                        "on-primary-container": "var(--color-on-primary-container)",
+                        "secondary": "var(--color-secondary)",
+                        "background": "var(--color-background)",
+                        "on-secondary-container": "var(--color-on-secondary-container)",
+                        "surface-dim": "var(--color-surface-dim)",
+                        "inverse-primary": "var(--color-inverse-primary)",
+                        "on-secondary": "var(--color-on-secondary)",
+                        "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+                        "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+                        "on-tertiary": "var(--color-on-tertiary)",
+                        "error-container": "var(--color-error-container)",
+                        "outline": "var(--color-outline)",
+                        "surface-container-highest": "var(--color-surface-container-highest)",
+                        "secondary-container": "var(--color-secondary-container)",
+                        "surface-container": "var(--color-surface-container)",
+                        "inverse-on-surface": "var(--color-inverse-on-surface)",
+                        "error": "var(--color-error)",
+                        "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+                        "tertiary-container": "var(--color-tertiary-container)",
+                        "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+                        "on-surface": "var(--color-on-surface)",
+                        "on-error-container": "var(--color-on-error-container)",
+                        "outline-variant": "var(--color-outline-variant)",
+                        "secondary-fixed": "var(--color-secondary-fixed)",
+                        "on-surface-variant": "var(--color-on-surface-variant)",
+                        "surface-container-low": "var(--color-surface-container-low)",
+                        "primary-container": "var(--color-primary-container)",
+                        "tertiary": "var(--color-tertiary)",
+                        "surface-tint": "var(--color-surface-tint)",
+                        "primary-fixed": "var(--color-primary-fixed)",
+                        "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+                        "on-tertiary-container": "var(--color-on-tertiary-container)",
+                        "on-tertiary-fixed": "var(--color-on-tertiary-fixed)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "section-gap-mobile": "64px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Geist"],
+                        "code-sm": ["JetBrains Mono"],
+                        "body-lg": ["Geist"],
+                        "display": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "code-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --color-primary-fixed-dim: #0088cc;
+            --color-surface-container-lowest: #ffffff;
+            --color-surface-bright: #f8f9fa;
+            --color-primary: #0088cc;
+            --color-on-background: #1a1a1a;
+            --color-tertiary-fixed: #333333;
+            --color-surface-container-high: #e9ecef;
+            --color-secondary-fixed-dim: #d0bcff;
+            --color-on-primary: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-on-error: #ffffff;
+            --color-surface-variant: #e9ecef;
+            --color-on-primary-fixed: #003366;
+            --color-inverse-surface: #343a40;
+            --color-on-primary-container: #004085;
+            --color-secondary: #0055ff;
+            --color-background: #f8f9fa;
+            --color-on-secondary-container: #002b80;
+            --color-surface-dim: #dee2e6;
+            --color-inverse-primary: #cce5ff;
+            --color-on-secondary: #ffffff;
+            --color-on-tertiary-fixed-variant: #004395;
+            --color-on-secondary-fixed-variant: #5516be;
+            --color-on-tertiary: #ffffff;
+            --color-error-container: #f8d7da;
+            --color-outline: #6c757d;
+            --color-surface-container-highest: #ced4da;
+            --color-secondary-container: #b8daff;
+            --color-surface-container: #f1f3f5;
+            --color-inverse-on-surface: #f8f9fa;
+            --color-error: #dc3545;
+            --color-on-secondary-fixed: #23005c;
+            --color-tertiary-container: #d6d8db;
+            --color-on-primary-fixed-variant: #004e5c;
+            --color-on-surface: #212529;
+            --color-on-error-container: #721c24;
+            --color-outline-variant: #adb5bd;
+            --color-secondary-fixed: #cce5ff;
+            --color-on-surface-variant: #495057;
+            --color-surface-container-low: #f8f9fa;
+            --color-primary-container: #cce5ff;
+            --color-tertiary: #495057;
+            --color-surface-tint: #0088cc;
+            --color-primary-fixed: #0088cc;
+            --color-tertiary-fixed-dim: #6c757d;
+            --color-on-tertiary-container: #212529;
+            --color-on-tertiary-fixed: #111111;
+            --glass-bg: rgba(0, 0, 0, 0.03);
+            --glass-border-light: rgba(0, 0, 0, 0.1);
+            --glass-border-dark: rgba(0, 0, 0, 0.05);
+            --glass-hover-bg: rgba(0, 0, 0, 0.06);
+            --glass-hover-border: rgba(0, 0, 0, 0.2);
+            --skill-hover-bg: rgba(0, 0, 0, 0.05);
+            --ambient-opacity: 0.3;
+        }
+
+        :root.dark {
+            --color-primary-fixed-dim: #00d4ff;
+            --color-surface-container-lowest: #0e0e10;
+            --color-surface-bright: #39393b;
+            --color-primary: #00d4ff;
+            --color-on-background: #e5e1e4;
+            --color-tertiary-fixed: #d8e2ff;
+            --color-surface-container-high: #2a2a2c;
+            --color-secondary-fixed-dim: #d0bcff;
+            --color-on-primary: #003640;
+            --color-surface: #131315;
+            --color-on-error: #690005;
+            --color-surface-variant: #353437;
+            --color-on-primary-fixed: #001f26;
+            --color-inverse-surface: #e5e1e4;
+            --color-on-primary-container: #00424f;
+            --color-secondary: #0055ff;
+            --color-background: #131315;
+            --color-on-secondary-container: #c4abff;
+            --color-surface-dim: #131315;
+            --color-inverse-primary: #00687a;
+            --color-on-secondary: #3c0091;
+            --color-on-tertiary-fixed-variant: #004395;
+            --color-on-secondary-fixed-variant: #5516be;
+            --color-on-tertiary: #002e6a;
+            --color-error-container: #93000a;
+            --color-outline: #869397;
+            --color-surface-container-highest: #353437;
+            --color-secondary-container: #571bc1;
+            --color-surface-container: #201f22;
+            --color-inverse-on-surface: #313032;
+            --color-error: #ffb4ab;
+            --color-on-secondary-fixed: #23005c;
+            --color-tertiary-container: #78a5ff;
+            --color-on-primary-fixed-variant: #004e5c;
+            --color-on-surface: #e5e1e4;
+            --color-on-error-container: #ffdad6;
+            --color-outline-variant: #3d494c;
+            --color-secondary-fixed: #e9ddff;
+            --color-on-surface-variant: #bcc9cd;
+            --color-surface-container-low: #1c1b1d;
+            --color-primary-container: #06b6d4;
+            --color-tertiary: #adc6ff;
+            --color-surface-tint: #00d4ff;
+            --color-primary-fixed: #acedff;
+            --color-tertiary-fixed-dim: #adc6ff;
+            --color-on-tertiary-container: #00397f;
+            --color-on-tertiary-fixed: #001a42;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border-light: rgba(255, 255, 255, 0.1);
+            --glass-border-dark: rgba(255, 255, 255, 0.05);
+            --glass-hover-bg: rgba(255, 255, 255, 0.1);
+            --glass-hover-border: rgba(255, 255, 255, 0.2);
+            --skill-hover-bg: rgba(255, 255, 255, 0.1);
+            --ambient-opacity: 0.15;
+        }
+        .glass-panel {
+            background-color: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid var(--glass-border-light);
+            border-left: 1px solid var(--glass-border-light);
+            border-right: 1px solid var(--glass-border-dark);
+            border-bottom: 1px solid var(--glass-border-dark);
+        }
+        .glass-panel-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-panel-hover:hover {
+            background-color: var(--glass-hover-bg);
+            border-color: var(--glass-hover-border);
+            transform: scale(1.02);
+            border-left-color: theme('colors.primary');
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fade-in-quick {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.secondary'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            position: relative;
+        }
+
+        .glitch-hover:hover {
+            animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 1px) }
+            40% { transform: translate(-1px, -1px) }
+            60% { transform: translate(2px, 1px) }
+            80% { transform: translate(1px, -1px) }
+            100% { transform: translate(0) }
+        }
+
+        /* Cyberpunk 2077 Sliced Glitch */
+        .cyberpunk-glitch {
+            position: relative;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .cyberpunk-glitch::before,
+        .cyberpunk-glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.secondary'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+        }
+
+        .cyberpunk-glitch:hover {
+            animation: text-smear 1.5s ease-out forwards;
+        }
+
+        .cyberpunk-glitch:hover::before {
+            opacity: 1;
+            animation: smear-slice-1 1.5s ease-out forwards;
+        }
+
+        .cyberpunk-glitch:hover::after {
+            opacity: 1;
+            animation: smear-slice-2 1.5s ease-out forwards;
+        }
+
+        @keyframes smear-slice-1 {
+            0% { clip-path: inset(20% 0 78% 0); transform: translate(-50px, 0) scaleX(5); opacity: 0; }
+            20% { clip-path: inset(60% 0 38% 0); transform: translate(100px, 0) scaleX(10); opacity: 1; }
+            40% { clip-path: inset(40% 0 58% 0); transform: translate(-150px, 0) scaleX(15); opacity: 1; }
+            60% { clip-path: inset(80% 0 18% 0); transform: translate(50px, 0) scaleX(5); opacity: 0.8; }
+            80% { clip-path: inset(10% 0 88% 0); transform: translate(-20px, 0) scaleX(3); opacity: 0.5; }
+            100% { clip-path: inset(0 0 0 0); transform: translate(0, 0) scaleX(1); opacity: 0; }
+        }
+
+        @keyframes smear-slice-2 {
+            0% { clip-path: inset(10% 0 88% 0); transform: translate(50px, 0) scaleX(8); opacity: 0; }
+            20% { clip-path: inset(30% 0 68% 0); transform: translate(-80px, 0) scaleX(12); opacity: 1; }
+            40% { clip-path: inset(70% 0 28% 0); transform: translate(120px, 0) scaleX(8); opacity: 1; }
+            60% { clip-path: inset(20% 0 78% 0); transform: translate(-50px, 0) scaleX(5); opacity: 0.8; }
+            80% { clip-path: inset(50% 0 48% 0); transform: translate(20px, 0) scaleX(2); opacity: 0.5; }
+            100% { clip-path: inset(0 0 0 0); transform: translate(0, 0) scaleX(1); opacity: 0; }
+        }
+
+        @keyframes text-smear {
+            0% { transform: scaleX(1); filter: blur(0); opacity: 1; }
+            20% { transform: scaleX(2) scaleY(0.8); filter: blur(4px); opacity: 0; }
+            40% { transform: scaleX(1.5) scaleY(0.9); filter: blur(2px); opacity: 0.2; }
+            60% { transform: scaleX(1.1); filter: blur(1px); opacity: 0.8; }
+            100% { transform: scaleX(1); filter: blur(0); opacity: 1; }
+        }
+
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: var(--ambient-opacity);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+        .hover-glow:hover {
+            text-shadow: 0 0 12px theme('colors.primary'), 0 0 20px theme('colors.primary');
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-lowest');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.primary');
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.secondary');
+        }
+
+        /* Skill Cards Dynamic Hover */
+        .skill-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-card-hover:hover {
+            background-color: var(--skill-hover-bg);
+            border-color: var(--hover-color, theme('colors.primary'));
+            box-shadow: 0 0 15px var(--hover-color, theme('colors.primary'));
+            transform: translateY(-5px);
+        }
+
+        /* Custom Cursor */
+        @media (min-width: 768px) {
+            * {
+                cursor: none !important;
+            }
+            .custom-cursor {
+                position: fixed;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: theme('colors.primary');
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: transform 0.15s ease, background-color 0.2s ease;
+            }
+            .custom-cursor-follower {
+                position: fixed;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                pointer-events: none;
+                z-index: 9998;
+                transform: translate(-50%, -50%);
+                transition: transform 0.3s ease-out, border-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+            }
+            
+            .custom-cursor.hover {
+                transform: translate(-50%, -50%) scale(1.5);
+                background-color: theme('colors.secondary');
+            }
+            .custom-cursor-follower.hover {
+                transform: translate(-50%, -50%) scale(1.5);
+                border-color: theme('colors.primary');
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+            
+            .custom-cursor.clicked {
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            .custom-cursor-follower.clicked {
+                transform: translate(-50%, -50%) scale(0.8);
+                background-color: theme('colors.primary');
+                opacity: 0.2;
+            }
+            
+            .custom-cursor.hidden, .custom-cursor-follower.hidden {
+                opacity: 0;
+            }
+        }
+    </style>
+  </head>
+  <body class="bg-surface-container-lowest text-on-background font-body-md overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
