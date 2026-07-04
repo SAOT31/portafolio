@@ -36,7 +36,7 @@ export const Hero = () => {
             <a className="h-12 px-8 rounded-lg bg-gradient-to-r from-primary to-secondary text-surface-container-lowest flex items-center justify-center hover:opacity-90 transition-opacity" href="#contact">
               {t.contactMe}
             </a>
-            <a className="hover-glow h-12 px-6 rounded-lg glass-panel flex items-center justify-center hover:bg-white/10 transition-colors gap-2 text-on-background hover:text-primary focus:text-primary dark:hover:text-primary" href="cv.pdf" download>
+            <a className="hover-glow h-12 px-6 rounded-lg glass-panel flex items-center justify-center hover:bg-white/10 transition-colors gap-2 text-on-background hover:text-primary focus:text-primary dark:hover:text-primary" href="SERGIO   ALEJANDRO OSPINA TABARES CV.pdf" download="Sergio_Alejandro_Ospina_CV.pdf">
               <span className="material-symbols-outlined text-[20px]">download</span>
               {t.downloadCV}
             </a>
@@ -55,7 +55,7 @@ export const Hero = () => {
           <div className="relative z-10 rounded-full p-[2px] w-[350px] h-[350px] mx-auto mt-12 flex flex-col justify-center items-center overflow-hidden group">
             <div className="absolute inset-[-50%] bg-[conic-gradient(transparent_270deg,theme(colors.primary)_360deg)] animate-[spin_3s_linear_infinite]"></div>
             <div className="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest relative z-10 p-1 glass-panel">
-                <img src="foto.jpg" alt="Profile" className="w-full h-full rounded-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105" />
+                <img src="foto.jpg" alt="Profile" className="w-full h-full rounded-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
             </div>
           </div>
         </div>

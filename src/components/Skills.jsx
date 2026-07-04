@@ -18,7 +18,7 @@ export const Skills = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
           {t.techCategories.map((category, idx) => (
-            <div key={idx} className="glass-panel rounded-xl p-6 flex flex-col gap-4">
+            <div key={idx} className={`glass-panel rounded-xl p-6 flex flex-col gap-4 ${idx === 4 ? 'md:col-span-2' : ''}`}>
               <div className="flex items-center gap-3 mb-2 border-b border-white/10 pb-3">
                 <span className="material-symbols-outlined text-primary text-2xl">{category.icon}</span>
                 <h4 className="font-headline-md text-headline-md text-on-background">{category.name}</h4>

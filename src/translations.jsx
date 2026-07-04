@@ -12,12 +12,12 @@ export const translations = {
       name: "Sergio Alejandro Ospina Tabares.",
       availability: "Disponible para nuevas oportunidades",
       roles: [
-        "Desarrollador de Software en Formación.", 1000,
-        "Apasionado por el código limpio.", 1000,
+        "Software Developer.", 1000,
         "Entusiasta de la tecnología.", 1000,
-        "Desarrollador Python, HTML/CSS y JavaScript.", 1000
+        "Desarrollador C#, .NET, Python, JS, PHP y React.", 1000,
+        "Creador de soluciones tecnológicas.", 1000
       ],
-      description: "Actualmente construyendo soluciones y gestionando datos con bases de datos SQL y NoSQL.",
+      description: "Desarrollador de software que disfruta colaborar en equipo para transformar ideas en soluciones reales. Me esfuerzo por construir sistemas eficientes que faciliten el trabajo de los usuarios y generen un impacto positivo en cada proyecto.",
       downloadCV: "Descargar CV",
       contactMe: "Contáctame",
     },
@@ -27,24 +27,29 @@ export const translations = {
       softSkills: "Habilidades Blandas",
       techCategories: [
         {
-          name: "Backend & Arquitectura",
-          icon: "architecture",
-          skills: ["C#", ".NET Core", "ASP.NET Core (MVC)", "Python", "FastAPI", "PHP (Laravel)", "Node.js", "Clean Architecture", "REST APIs", "JSON Server"]
+          name: "Arquitectura & Patrones",
+          icon: "account_tree",
+          skills: ["Clean Architecture", "Microservicios", "Multi-tenant", "Monolito", "Arquitectura en Capas", "MVC", "API RESTful"]
         },
         {
-          name: "Bases de Datos & ORM",
-          icon: "database",
-          skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework Core"]
+          name: "Backend",
+          icon: "terminal",
+          skills: ["C# .NET Core", "ASP.NET", "Python", "FastAPI", "PHP (Laravel)", "Node.js"]
         },
         {
           name: "Frontend",
           icon: "web",
-          skills: ["JavaScript", "React", "HTML5", "CSS3", "SCSS", "Razor"]
+          skills: ["JavaScript", "React", "Blazor", "Razor", "HTML5 & CSS3", "SCSS"]
+        },
+        {
+          name: "Bases de Datos & ORM",
+          icon: "database",
+          skills: ["PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework"]
         },
         {
           name: "Infraestructura & Herramientas",
           icon: "cloud",
-          skills: ["Git & GitFlow", "GitHub", "Docker", "VPS", "Vercel", "Azure", "Azure DevOps", "CI/CD", "Scrum (Jira)", "Docusaurus", "Excel"]
+          skills: ["Git / GitHub", "Docker", "VPS", "Vercel", "Azure DevOps", "Scrum", "Jira", "Docusaurus"]
         }
       ],
       soft1: <>Me considero una persona <strong className="text-primary">proactiva y orientada a resultados</strong>, con un alto sentido de responsabilidad y seriedad. Soy analítico por naturaleza; adquiero y comparto conocimientos con facilidad, buscando siempre aportar soluciones innovadoras.</>,
@@ -78,10 +83,12 @@ export const translations = {
       }
     },
     contact: {
-      title: "Inicializar Conexión",
-      subtitle: "Abierto a discutir retos técnicos, revisiones arquitectónicas o posibles colaboraciones en sistemas backend robustos.",
-      email: "sergio.ospinata@amigo.edu.co",
-      location: "Colombia",
+      title: "Hablemos",
+      subtitle: "Estoy abierto a nuevas oportunidades. Si quieres hablar sobre tecnología, tienes algún proyecto en mente o buscas sumar talento a tu equipo, contáctame.",
+      email: "Correo Electrónico",
+      copied: "¡Copiado!",
+      whatsapp: "WhatsApp",
+      location: "Medellín, Antioquia, Colombia",
       form: {
         name: "Identidad del Sistema (Nombre)",
         namePlaceholder: "Juan Pérez",
@@ -109,12 +116,12 @@ export const translations = {
       name: "Sergio Alejandro Ospina Tabares.",
       availability: "Available for new opportunities",
       roles: [
-        "Software Developer in Training.", 1000,
-        "Passionate about clean code.", 1000,
+        "Software Developer.", 1000,
         "Tech enthusiast.", 1000,
-        "Python, HTML/CSS and JavaScript developer.", 1000
+        "C#, .NET, Python, JS, PHP and React Developer.", 1000,
+        "Creator of technological solutions.", 1000
       ],
-      description: "Currently building solutions and managing data with SQL & NoSQL databases.",
+      description: "Software Developer who enjoys collaborating in teams to transform ideas into real solutions. I strive to build efficient systems that make life easier for users and generate a positive impact on every project.",
       downloadCV: "Download CV",
       contactMe: "Contact Me",
     },
@@ -124,24 +131,29 @@ export const translations = {
       softSkills: "Soft Skills",
       techCategories: [
         {
-          name: "Backend & Architecture",
-          icon: "architecture",
-          skills: ["C#", ".NET Core", "ASP.NET Core (MVC)", "Python", "FastAPI", "PHP (Laravel)", "Node.js", "Clean Architecture", "REST APIs", "JSON Server"]
+          name: "Architecture & Patterns",
+          icon: "account_tree",
+          skills: ["Clean Architecture", "Microservices", "Multi-tenant", "Monolith", "Layered Architecture", "MVC", "RESTful API"]
         },
         {
-          name: "Databases & ORM",
-          icon: "database",
-          skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework Core"]
+          name: "Backend",
+          icon: "terminal",
+          skills: ["C# .NET Core", "ASP.NET", "Python", "FastAPI", "PHP (Laravel)", "Node.js"]
         },
         {
           name: "Frontend",
           icon: "web",
-          skills: ["JavaScript", "React", "HTML5", "CSS3", "SCSS", "Razor"]
+          skills: ["JavaScript", "React", "Blazor", "Razor", "HTML5 & CSS3", "SCSS"]
+        },
+        {
+          name: "Databases & ORM",
+          icon: "database",
+          skills: ["PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework"]
         },
         {
           name: "Infrastructure & Tools",
           icon: "cloud",
-          skills: ["Git & GitFlow", "GitHub", "Docker", "VPS", "Vercel", "Azure", "Azure DevOps", "CI/CD", "Scrum (Jira)", "Docusaurus", "Excel"]
+          skills: ["Git / GitHub", "Docker", "VPS", "Vercel", "Azure DevOps", "Scrum", "Jira", "Docusaurus"]
         }
       ],
       soft1: <>I consider myself a <strong className="text-primary">proactive and goal-oriented person</strong>, with a high sense of responsibility and seriousness. I am analytical by nature; I acquire and share knowledge easily, always looking to provide innovative solutions.</>,
@@ -175,10 +187,12 @@ export const translations = {
       }
     },
     contact: {
-      title: "Initialize Connection",
-      subtitle: "Open to discussing technical challenges, architectural reviews, or potential collaborations on robust backend systems.",
-      email: "sergio.ospinata@amigo.edu.co",
-      location: "Colombia",
+      title: "Let's Talk",
+      subtitle: "I'm open to new opportunities. Whether you want to talk about tech, have a project in mind, or are looking to add talent to your team, feel free to reach out.",
+      email: "Email",
+      copied: "Copied!",
+      whatsapp: "WhatsApp",
+      location: "Medellin, Antioquia, Colombia",
       form: {
         name: "System Identity (Name)",
         namePlaceholder: "John Doe",
