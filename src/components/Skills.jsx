@@ -16,39 +16,22 @@ export const Skills = () => {
         <div className="w-full max-w-4xl text-left mb-4">
             <h3 className="font-headline-md text-headline-md text-on-background">{t.hardSkills}</h3>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">data_object</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.python}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">html</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.htmlCss}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">javascript</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.javascript}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">terminal</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.csharp}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">database</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.databases}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">account_tree</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.git}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">code</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.vscode}</span>
-          </div>
-          <div className="glass-panel skill-card-hover rounded-xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-default">
-            <span className="material-symbols-outlined text-3xl text-primary transition-colors">language</span>
-            <span className="font-body-md text-body-md font-medium">{t.items.english}</span>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+          {t.techCategories.map((category, idx) => (
+            <div key={idx} className="glass-panel rounded-xl p-6 flex flex-col gap-4">
+              <div className="flex items-center gap-3 mb-2 border-b border-white/10 pb-3">
+                <span className="material-symbols-outlined text-primary text-2xl">{category.icon}</span>
+                <h4 className="font-headline-md text-headline-md text-on-background">{category.name}</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, sIdx) => (
+                  <span key={sIdx} className="font-code-sm text-xs bg-surface/50 border border-white/5 rounded-full px-3 py-1 text-on-surface-variant hover:text-primary hover:border-primary/30 transition-colors cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Soft Skills Section */}

@@ -25,16 +25,28 @@ export const translations = {
       title: "Habilidades",
       hardSkills: "Habilidades Técnicas",
       softSkills: "Habilidades Blandas",
-      items: {
-        python: "Python",
-        htmlCss: "HTML & CSS",
-        javascript: "JavaScript",
-        csharp: "C# .NET",
-        databases: "Bases de Datos",
-        git: "Git / GitHub",
-        vscode: "VS Code",
-        english: "Inglés"
-      },
+      techCategories: [
+        {
+          name: "Backend & Arquitectura",
+          icon: "architecture",
+          skills: ["C#", ".NET Core", "ASP.NET Core (MVC)", "Python", "FastAPI", "PHP (Laravel)", "Node.js", "Clean Architecture", "REST APIs", "JSON Server"]
+        },
+        {
+          name: "Bases de Datos & ORM",
+          icon: "database",
+          skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework Core"]
+        },
+        {
+          name: "Frontend",
+          icon: "web",
+          skills: ["JavaScript", "React", "HTML5", "CSS3", "SCSS", "Razor"]
+        },
+        {
+          name: "Infraestructura & Herramientas",
+          icon: "cloud",
+          skills: ["Git & GitFlow", "GitHub", "Docker", "VPS", "Vercel", "Azure", "Azure DevOps", "CI/CD", "Scrum (Jira)", "Docusaurus", "Excel"]
+        }
+      ],
       soft1: <>Me considero una persona <strong className="text-primary">proactiva y orientada a resultados</strong>, con un alto sentido de responsabilidad y seriedad. Soy analítico por naturaleza; adquiero y comparto conocimientos con facilidad, buscando siempre aportar soluciones innovadoras.</>,
       soft2: <>Me adapto fácilmente a entornos de trabajo en equipo, contribuyendo a la <strong className="text-primary">optimización de procesos</strong>. Tengo la capacidad de planificar y priorizar tareas, manteniendo una <strong className="text-primary">actitud positiva</strong> y disposición para aprender.</>
     },
@@ -110,16 +122,28 @@ export const translations = {
       title: "Skills",
       hardSkills: "Hard Skills",
       softSkills: "Soft Skills",
-      items: {
-        python: "Python",
-        htmlCss: "HTML & CSS",
-        javascript: "JavaScript",
-        csharp: "C# .NET",
-        databases: "Databases",
-        git: "Git / GitHub",
-        vscode: "VS Code",
-        english: "English"
-      },
+      techCategories: [
+        {
+          name: "Backend & Architecture",
+          icon: "architecture",
+          skills: ["C#", ".NET Core", "ASP.NET Core (MVC)", "Python", "FastAPI", "PHP (Laravel)", "Node.js", "Clean Architecture", "REST APIs", "JSON Server"]
+        },
+        {
+          name: "Databases & ORM",
+          icon: "database",
+          skills: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB", "NoSQL", "Entity Framework Core"]
+        },
+        {
+          name: "Frontend",
+          icon: "web",
+          skills: ["JavaScript", "React", "HTML5", "CSS3", "SCSS", "Razor"]
+        },
+        {
+          name: "Infrastructure & Tools",
+          icon: "cloud",
+          skills: ["Git & GitFlow", "GitHub", "Docker", "VPS", "Vercel", "Azure", "Azure DevOps", "CI/CD", "Scrum (Jira)", "Docusaurus", "Excel"]
+        }
+      ],
       soft1: <>I consider myself a <strong className="text-primary">proactive and goal-oriented person</strong>, with a high sense of responsibility and seriousness. I am analytical by nature; I acquire and share knowledge easily, always looking to provide innovative solutions.</>,
       soft2: <>I adapt easily to teamwork environments, contributing to the <strong className="text-primary">optimization of processes</strong>. I have the ability to plan and prioritize tasks, maintaining a <strong className="text-primary">positive attitude</strong> and willingness to learn.</>
     },
