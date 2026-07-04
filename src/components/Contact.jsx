@@ -55,6 +55,7 @@ export const Contact = () => {
             <input type="hidden" name="_subject" value="Nuevo mensaje desde tu Portafolio" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://saot31.github.io/portafolio/" />
             <div className="flex flex-col gap-2">
               <label className="font-label-caps text-label-caps text-on-surface-variant">{t.form.name}</label>
               <input name="name" required className="w-full bg-white border border-gray-300 rounded-lg p-3 font-body-md text-gray-900 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder={t.form.namePlaceholder} type="text" />
