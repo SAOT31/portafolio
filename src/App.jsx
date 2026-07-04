@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { CustomCursor } from './components/CustomCursor';
 import { ToTopButton } from './components/ToTopButton';
 import { ScrollProgress } from './components/ScrollProgress';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   useEffect(() => {
@@ -33,20 +34,24 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-surface-container-lowest min-h-screen text-on-surface font-body-md transition-colors duration-300">
-      <CustomCursor />
-      <ScrollProgress />
-      <Header />
-      <main className="w-full relative">
-        <Hero />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-      <ToTopButton />
-    </div>
+    <LanguageProvider>
+      <div className="bg-surface-container-lowest min-h-screen text-on-surface font-body-md transition-colors duration-300">
+        <CustomCursor />
+        <ScrollProgress />
+        <Header />
+        
+        <main className="w-full relative">
+          <Hero />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+
+        <Footer />
+        <ToTopButton />
+      </div>
+    </LanguageProvider>
   );
 }
 

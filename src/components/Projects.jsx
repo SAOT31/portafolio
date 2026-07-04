@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const projectsData = [
   {
@@ -342,6 +344,8 @@ const projectsData = [
 
 export const Projects = () => {
   const [filter, setFilter] = useState('All');
+  const { language } = useLanguage();
+  const t = translations[language].projects;
   
   const categories = ['All', 'Python', 'HTML & CSS', 'JavaScript', 'Databases', 'C# & ASP.NET'];
   
@@ -354,8 +358,8 @@ export const Projects = () => {
     <section className="py-section-gap-mobile md:py-section-gap max-w-container-max mx-auto px-gutter relative z-10" id="projects">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12 fade-up">
         <div>
-          <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Featured Implementations</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">Selected projects demonstrating architectural planning and execution.</p>
+          <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">{t.title}</h2>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-xl">{t.subtitle}</p>
         </div>
         <div className="mt-6 md:mt-0 flex gap-2 flex-wrap">
           {categories.map(cat => (
@@ -364,7 +368,7 @@ export const Projects = () => {
               onClick={() => setFilter(cat)}
               className={`px-4 py-1.5 rounded-full glass-panel font-label-caps text-label-caps transition-colors ${filter === cat ? 'text-primary border-primary/30' : 'text-on-surface-variant hover:text-on-background'}`}
             >
-              {cat}
+              {t.categories[cat]}
             </button>
           ))}
         </div>
@@ -401,12 +405,12 @@ export const Projects = () => {
               <div className="flex gap-4">
                 {proj.codeLink && (
                     <a className="font-label-caps text-label-caps text-primary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.codeLink} target="_blank" rel="noreferrer">
-                    View Code <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    {t.viewCode} <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                     </a>
                 )}
                 {proj.demoLink && (
                   <a className="font-label-caps text-label-caps text-secondary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.demoLink} target="_blank" rel="noreferrer">
-                    View Demo <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+                    {t.viewLive} <span className="material-symbols-outlined text-[16px]">open_in_new</span>
                   </a>
                 )}
               </div>

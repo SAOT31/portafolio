@@ -1,7 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
 import { ParticlesBackground } from './ParticlesBackground';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 export const Hero = () => {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   return (
     <section className="min-h-screen flex items-center pt-16 max-w-container-max mx-auto px-gutter relative z-10 overflow-hidden" id="home">
       <ParticlesBackground />
@@ -9,31 +14,31 @@ export const Hero = () => {
         <div className="col-span-1 md:col-span-7 fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="font-label-caps text-label-caps text-on-surface-variant">Available for new opportunities</span>
+            <span className="font-label-caps text-label-caps text-on-surface-variant">{t.availability}</span>
           </div>
           <h1 className="font-display text-display text-on-background mb-6">
-            Hi, I am <br/>
-            <span className="gradient-text cyberpunk-glitch" data-text="Sergio Alejandro Ospina Tabares.">Sergio Alejandro Ospina Tabares.</span>
+            {t.greeting} <br/>
+            <span className="gradient-text cyberpunk-glitch" data-text={t.name}>{t.name}</span>
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl min-h-[80px]">
             <TypeAnimation
-              sequence={[
-                'Software Developer in Training.', 1000,
-                'Passionate about clean code.', 1000,
-                'Tech enthusiast.', 1000,
-                'Python, HTML/CSS and JavaScript developer.', 1000
-              ]}
+              key={language}
+              sequence={t.roles}
               wrapper="span"
               speed={50}
               repeat={Infinity}
               className="text-primary font-code-sm"
             />
             <br />
-            Currently building solutions and managing data with SQL &amp; NoSQL databases.
+            {t.description}
           </p>
           <div className="flex flex-wrap items-center gap-4 font-label-caps text-label-caps">
             <a className="h-12 px-8 rounded-lg bg-gradient-to-r from-primary to-secondary text-surface-container-lowest flex items-center justify-center hover:opacity-90 transition-opacity" href="#contact">
-              Contact Me
+              {t.contactMe}
+            </a>
+            <a className="hover-glow h-12 px-6 rounded-lg glass-panel flex items-center justify-center hover:bg-white/10 transition-colors gap-2 text-on-background hover:text-primary focus:text-primary dark:hover:text-primary" href="cv.pdf" download>
+              <span className="material-symbols-outlined text-[20px]">download</span>
+              {t.downloadCV}
             </a>
             <a className="hover-glow h-12 px-6 rounded-lg glass-panel flex items-center justify-center hover:bg-white/10 transition-colors gap-2 text-on-background hover:text-primary focus:text-primary dark:hover:text-primary" href="https://github.com/SAOT31" target="_blank" rel="noreferrer">
               <span className="material-symbols-outlined text-[20px]">code</span>

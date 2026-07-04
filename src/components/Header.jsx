@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useUISounds } from '../hooks/useSound';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 export const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const { playClickSound } = useUISounds();
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language].nav;
 
   useEffect(() => {
     // Check local storage or default to true
@@ -39,10 +43,10 @@ export const Header = () => {
         </div>
         <div className="hidden md:flex space-x-8">
           <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#home">Home</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#experience">Experience</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#skills">Skills</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#experience">{t.experience}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#skills">{t.skills}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#projects">{t.projects}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#contact">{t.contact}</a>
         </div>
         <div className="flex items-center gap-4">
           <button 
@@ -53,6 +57,13 @@ export const Header = () => {
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0" }}>
               {isDarkMode ? 'light_mode' : 'dark_mode'}
             </span>
+          </button>
+          <button 
+            onClick={() => { playClickSound(); toggleLanguage(); }}
+            className="text-on-surface-variant hover:text-primary font-label-caps font-bold transition-colors duration-300 w-8 text-center"
+            aria-label="Toggle language"
+          >
+            {language === 'es' ? 'EN' : 'ES'}
           </button>
           <button className="md:hidden text-on-surface-variant">
             <span className="material-symbols-outlined">menu</span>
