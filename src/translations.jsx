@@ -43,10 +43,11 @@ export const translations = {
       subtitle: "Mi camino en el mundo del desarrollo de software.",
       items: [
         {
-          period: "Presente",
-          role: "Desarrollador de Software en Formación",
-          company: "Autodidacta & Académico",
-          description: "Actualmente en etapa de formación y desarrollando proyectos académicos. Construyendo soluciones full-stack y aprendiendo arquitecturas modernas."
+          period: "oct. 2025 - Presente",
+          role: "Software Developer",
+          company: "Riwi.io",
+          location: "Medellín, Antioquia, Colombia · Presencial",
+          description: "Desarrollo de soluciones de software multi-tenant, implementando patrones y diseños escalables como Clean Architecture, Hexagonal, MVC, Microservicios y monolítica. Construcción de APIs RESTful y lógica de negocio en backend con C#, .NET Core y Python, gestionando la persistencia de datos con PostgreSQL, SQL y MongoDB. Desarrollo de interfaces frontend utilizando React, Blazor, Razor, JavaScript y Tailwind CSS, junto con la creación de aplicaciones mediante Flutter y Dart. Gestión de infraestructura, pipelines de CI/CD y despliegues empleando Docker, VPS, Render y Vercel, garantizando el monitoreo operativo con Sentry. Integración de APIs externas y automatización de procesos (n8n.io, Make, WhatsApp, Trello, EmailJS), ejecutando el ciclo de desarrollo bajo la metodología Scrum, respaldado por Jira y Azure para la gestión de tareas y proyectos, y GitHub para el control de versiones."
         }
       ]
     },
@@ -127,10 +128,11 @@ export const translations = {
       subtitle: "My path in the software development world.",
       items: [
         {
-          period: "Present",
-          role: "Software Developer in Training",
-          company: "Self-Taught & Academic",
-          description: "Currently in the training stage and developing academic projects. Building full-stack solutions and learning modern architectures."
+          period: "Oct. 2025 - Present",
+          role: "Software Developer",
+          company: "Riwi.io",
+          location: "Medellín, Antioquia, Colombia · On-site",
+          description: "Development of multi-tenant software solutions, implementing scalable patterns and designs such as Clean Architecture, Hexagonal, MVC, Microservices, and monolithic. Construction of RESTful APIs and backend business logic with C#, .NET Core, and Python, managing data persistence with PostgreSQL, SQL, and MongoDB. Development of frontend interfaces using React, Blazor, Razor, JavaScript, and Tailwind CSS, along with the creation of applications using Flutter and Dart. Infrastructure management, CI/CD pipelines, and deployments using Docker, VPS, Render, and Vercel, ensuring operational monitoring with Sentry. Integration of external APIs and process automation (n8n.io, Make, WhatsApp, Trello, EmailJS), executing the development cycle under the Scrum methodology, supported by Jira and Azure for task and project management, and GitHub for version control."
         }
       ]
     },
