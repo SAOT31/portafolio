@@ -69,8 +69,8 @@ export const translations = {
       ]
     },
     projects: {
-      title: "Implementaciones Destacadas",
-      subtitle: "Proyectos seleccionados que demuestran planificación y ejecución arquitectónica.",
+      title: "Proyectos",
+      subtitle: "Una selección de mis trabajos más recientes y relevantes.",
       viewCode: "Ver Código",
       viewLive: "Ver Demo",
       categories: {
@@ -79,7 +79,8 @@ export const translations = {
         "Python": "Python",
         "JavaScript": "JavaScript",
         "HTML & CSS": "HTML & CSS",
-        "Databases": "Bases de Datos"
+        "Databases": "Bases de Datos",
+        "PHP": "PHP"
       }
     },
     contact: {
@@ -173,8 +174,8 @@ export const translations = {
       ]
     },
     projects: {
-      title: "Featured Implementations",
-      subtitle: "Selected projects demonstrating architectural planning and execution.",
+      title: "Projects",
+      subtitle: "A selection of my most recent and relevant work.",
       viewCode: "View Code",
       viewLive: "View Demo",
       categories: {
@@ -183,7 +184,8 @@ export const translations = {
         "Python": "Python",
         "JavaScript": "JavaScript",
         "HTML & CSS": "HTML & CSS",
-        "Databases": "Databases"
+        "Databases": "Databases",
+        "PHP": "PHP"
       }
     },
     contact: {

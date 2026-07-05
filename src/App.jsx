@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Skills } from './components/Skills';
@@ -10,8 +11,12 @@ import { CustomCursor } from './components/CustomCursor';
 import { ToTopButton } from './components/ToTopButton';
 import { ScrollProgress } from './components/ScrollProgress';
 import { LanguageProvider } from './context/LanguageContext';
+import { AuthProvider } from './context/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { Login } from './pages/Login';
+import { Admin } from './pages/Admin';
 
-function App() {
+const Portfolio = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -19,11 +24,8 @@ function App() {
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
-    // Wait a tick for rendering
     setTimeout(() => {
       document.querySelectorAll('.fade-up').forEach((el) => {
         observer.observe(el);
@@ -34,24 +36,40 @@ function App() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <div className="bg-surface-container-lowest min-h-screen text-on-surface font-body-md transition-colors duration-300">
-        <CustomCursor />
-        <ScrollProgress />
-        <Header />
-        
-        <main className="w-full relative">
-          <Hero />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
+    <div className="bg-surface-container-lowest min-h-screen text-on-surface font-body-md transition-colors duration-300">
+      <CustomCursor />
+      <ScrollProgress />
+      <Header />
+      <main className="w-full relative">
+        <Hero />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+      <ToTopButton />
+    </div>
+  );
+};
 
-        <Footer />
-        <ToTopButton />
-      </div>
-    </LanguageProvider>
+function App() {
+  return (
+    <AuthProvider>
+      <LanguageProvider>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            } />
+          </Routes>
+        </HashRouter>
+      </LanguageProvider>
+    </AuthProvider>
   );
 }
 

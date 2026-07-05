@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
+import { db } from '../services/firebase';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 
 const projectsData = [
   {
@@ -148,14 +150,14 @@ const projectsData = [
     "title": "crudactivity lab 1",
     "description": "Training Lab Check-in.",
     "category": "JavaScript",
-    "codeLink": "",
+    "codeLink": "https://github.com/SAOT31/crudactivity-lab-1",
     "demoLink": ""
   },
   {
     "title": "crudactivity lab 2",
     "description": "Training Lab Check-in.",
     "category": "JavaScript",
-    "codeLink": "",
+    "codeLink": "https://github.com/SAOT31/crudactivity-lab-2",
     "demoLink": ""
   },
   {
@@ -218,14 +220,14 @@ const projectsData = [
     "title": "M4S1",
     "description": "Conceptual and logical design of the database.",
     "category": "Databases",
-    "codeLink": "https://github.com/SAOT31/M3S1",
+    "codeLink": "https://github.com/SAOT31/M4S1",
     "demoLink": ""
   },
   {
     "title": "M4S2",
     "description": "Design and consultation of an Academic System in SQL.",
     "category": "Databases",
-    "codeLink": "https://github.com/SAOT31/M4S2n",
+    "codeLink": "https://github.com/SAOT31/M4S2",
     "demoLink": ""
   },
   {
@@ -339,20 +341,209 @@ const projectsData = [
     "category": "C# & ASP.NET",
     "codeLink": "https://github.com/Hubble-C/NextInLine",
     "demoLink": ""
+  },
+  {
+    "title": "api-tickets-laravel",
+    "description": "API RESTful para gestión y soporte de tickets de usuario desarrollada con PHP y Laravel.",
+    "descriptionEn": "RESTful API for user ticket management and support developed with PHP and Laravel.",
+    "category": "PHP",
+    "codeLink": "https://github.com/SAOT31/api-tickets-laravel",
+    "demoLink": ""
+  },
+  {
+    "title": "AstroBlog",
+    "description": "Blog dinámico multi-tenant desarrollado con PHP.",
+    "descriptionEn": "Dynamic multi-tenant blog developed with PHP.",
+    "category": "PHP",
+    "codeLink": "https://github.com/SAOT31/AstroBlog",
+    "demoLink": ""
+  },
+  {
+    "title": "Rentify",
+    "description": "Aplicación web completa para búsqueda, alquiler y reserva de inmuebles desarrollada en C# y ASP.NET.",
+    "descriptionEn": "Complete web application for property search, rental, and booking developed in C# and ASP.NET.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/Rentify",
+    "demoLink": ""
+  },
+  {
+    "title": "Logistics",
+    "description": "Sistema de gestión de inventarios, rutas y control logístico desarrollado en C# y .NET.",
+    "descriptionEn": "Inventory management, routing, and logistics control system developed in C# and .NET.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/Logistics",
+    "demoLink": ""
+  },
+  {
+    "title": "M6.3S1",
+    "description": "Firmeza (Materiales de construcción): Configuración del proyecto web con ASP.NET Core 10 Razor Pages y arquitectura base.",
+    "descriptionEn": "Firmeza (Construction Materials): Web project setup with ASP.NET Core 10 Razor Pages and base architecture.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/M6.3S1",
+    "demoLink": ""
+  },
+  {
+    "title": "M6.3S2",
+    "description": "Firmeza (Materiales de construcción): Implementación de la base de datos, persistencia y el catálogo de productos.",
+    "descriptionEn": "Firmeza (Construction Materials): Database implementation, persistence, and product catalog.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/M6.3S2",
+    "demoLink": ""
+  },
+  {
+    "title": "M6.3S3",
+    "description": "Firmeza (Materiales de construcción): Módulo de gestión y administración de clientes de la distribuidora.",
+    "descriptionEn": "Firmeza (Construction Materials): Customer management and administration module for the distributor.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/M6.3S3",
+    "demoLink": ""
+  },
+  {
+    "title": "Firmeza M6.3S4",
+    "description": "Firmeza (Materiales de construcción): Módulo de gestión de ventas y registro de transacciones comerciales.",
+    "descriptionEn": "Firmeza (Construction Materials): Sales management and business transaction registry module.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/M6.3S4",
+    "demoLink": ""
+  },
+  {
+    "title": "Firmeza M6.3S5",
+    "description": "Firmeza (Materiales de construcción): Reportes financieros, panel de analítica de negocio y optimizaciones finales.",
+    "descriptionEn": "Firmeza (Construction Materials): Financial reports, business analytics dashboard, and final optimizations.",
+    "category": "C# & ASP.NET",
+    "codeLink": "https://github.com/SAOT31/M6.3S5",
+    "demoLink": ""
   }
 ];
 
+const ProjectCard = ({ proj, t }) => {
+  const { language } = useLanguage();
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const imageList = proj.images || (proj.image ? [proj.image] : []);
+  const hasImages = imageList.length > 0;
+  const isMultiImage = imageList.length > 1;
+
+  const nextImage = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setImageIndex((prev) => (prev + 1) % imageList.length);
+  };
+
+  const prevImage = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setImageIndex((prev) => (prev - 1 + imageList.length) % imageList.length);
+  };
+
+  return (
+    <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02} transitionSpeed={2500} className="h-full">
+      <div className="glass-panel glass-panel-hover rounded-2xl overflow-hidden group flex flex-col h-full" style={{ animation: 'fade-in-quick 0.5s ease-out forwards' }}>
+        <div className="h-48 w-full overflow-hidden relative bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors group/carousel">
+          <div className="absolute inset-0 bg-surface-container-lowest/50 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
+          
+          {hasImages ? (
+            <>
+              <img className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 relative z-0" src={imageList[imageIndex]} alt={proj.title} />
+              
+              {isMultiImage && (
+                <>
+                  <button 
+                    onClick={prevImage}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-black/50 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-primary z-20 cursor-pointer"
+                  >
+                    <span className="material-symbols-outlined text-sm">chevron_left</span>
+                  </button>
+                  <button 
+                    onClick={nextImage}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-black/50 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-primary z-20 cursor-pointer"
+                  >
+                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  </button>
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20 pointer-events-none">
+                    {imageList.map((_, i) => (
+                      <div key={i} className={`w-1.5 h-1.5 rounded-full transition-colors ${i === imageIndex ? 'bg-primary' : 'bg-white/50'}`}></div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </>
+          ) : proj.category === 'Databases' ? (
+            <span className="material-symbols-outlined text-[64px] opacity-50 relative z-0 transform group-hover:scale-110 transition-transform duration-700 drop-shadow-lg">
+              database
+            </span>
+          ) : (
+            <i className={`text-[64px] opacity-50 relative z-0 transform group-hover:scale-110 transition-transform duration-700 drop-shadow-lg ${
+              proj.category === 'Python' ? 'devicon-python-plain' : 
+              proj.category === 'HTML & CSS' ? 'devicon-html5-plain' : 
+              proj.category === 'JavaScript' ? 'devicon-javascript-plain' : 
+              proj.category === 'C# & ASP.NET' ? 'devicon-csharp-plain' : 
+              proj.category === 'PHP' ? 'devicon-php-plain' : 
+              'devicon-github-original'
+            }`}></i>
+          )}
+        </div>
+        <div className="p-6 flex flex-col flex-grow">
+          <div className="flex gap-2 mb-4">
+            <span className="font-code-sm text-[10px] uppercase tracking-wider px-2 py-1 rounded bg-white/5 text-primary border border-white/10">{proj.category}</span>
+          </div>
+          <h3 className="font-headline-md text-headline-md text-on-background mb-2">{proj.title}</h3>
+          <p className="font-body-md text-sm text-on-surface-variant mb-6 flex-grow opacity-80">
+            {language === 'es' ? (proj.description || proj.descriptionEn) : (proj.descriptionEn || proj.description)}
+          </p>
+          
+          <div className="flex gap-4">
+            {proj.codeLink && (
+                <a className="font-label-caps text-label-caps text-primary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.codeLink} target="_blank" rel="noreferrer">
+                {t.viewCode} <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+            )}
+            {proj.demoLink && (
+              <a className="font-label-caps text-label-caps text-secondary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.demoLink} target="_blank" rel="noreferrer">
+                {t.viewLive} <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </Tilt>
+  );
+};
+
 export const Projects = () => {
   const [filter, setFilter] = useState('All');
+  const [allProjects, setAllProjects] = useState([]);
+  const [loadingFirebase, setLoadingFirebase] = useState(true);
   const { language } = useLanguage();
   const t = translations[language].projects;
+
+  useEffect(() => {
+    const fetchFromFirebase = async () => {
+      try {
+        const q = query(collection(db, 'projects'), orderBy('order', 'desc'));
+        const snap = await getDocs(q);
+        const fbProjects = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        if (fbProjects.length > 0) {
+          setAllProjects(fbProjects.filter(p => !p.hidden));
+        } else {
+          // Fallback: use static data if Firebase is empty
+          setAllProjects([...projectsData].reverse());
+        }
+      } catch {
+        // Fallback: use static data if Firebase fails
+        setAllProjects([...projectsData].reverse());
+      } finally {
+        setLoadingFirebase(false);
+      }
+    };
+    fetchFromFirebase();
+  }, []);
+
+  const categories = ['All', 'Python', 'HTML & CSS', 'JavaScript', 'Databases', 'C# & ASP.NET', 'PHP'];
   
-  const categories = ['All', 'Python', 'HTML & CSS', 'JavaScript', 'Databases', 'C# & ASP.NET'];
-  
-  const reversedProjects = [...projectsData].reverse();
   const filteredProjects = filter === 'All' 
-    ? reversedProjects 
-    : reversedProjects.filter(p => p.category === filter);
+    ? allProjects 
+    : allProjects.filter(p => p.category === filter);
 
   return (
     <section className="py-section-gap-mobile md:py-section-gap max-w-container-max mx-auto px-gutter relative z-10" id="projects">
@@ -373,52 +564,18 @@ export const Projects = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((proj, idx) => (
-          <Tilt key={idx} tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02} transitionSpeed={2500} className="h-full">
-            <div className="glass-panel glass-panel-hover rounded-2xl overflow-hidden group flex flex-col h-full" style={{ animation: 'fade-in-quick 0.5s ease-out forwards' }}>
-              <div className="h-48 w-full overflow-hidden relative bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
-              <div className="absolute inset-0 bg-surface-container-lowest/50 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-              {proj.image ? (
-                <img className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 relative z-0" src={proj.image} alt={proj.title} />
-              ) : proj.category === 'Databases' ? (
-                <span className="material-symbols-outlined text-[64px] opacity-50 relative z-0 transform group-hover:scale-110 transition-transform duration-700 drop-shadow-lg">
-                  database
-                </span>
-              ) : (
-                <i className={`text-[64px] opacity-50 relative z-0 transform group-hover:scale-110 transition-transform duration-700 drop-shadow-lg ${
-                  proj.category === 'Python' ? 'devicon-python-plain' : 
-                  proj.category === 'HTML & CSS' ? 'devicon-html5-plain' : 
-                  proj.category === 'JavaScript' ? 'devicon-javascript-plain' : 
-                  proj.category === 'C# & ASP.NET' ? 'devicon-csharp-plain' : 
-                  'devicon-github-original'
-                }`}></i>
-              )}
-            </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <div className="flex gap-2 mb-4">
-                <span className="font-code-sm text-[10px] uppercase tracking-wider px-2 py-1 rounded bg-white/5 text-primary border border-white/10">{proj.category}</span>
-              </div>
-              <h3 className="font-headline-md text-headline-md text-on-background mb-2">{proj.title}</h3>
-              <p className="font-body-md text-sm text-on-surface-variant mb-6 flex-grow opacity-80">{proj.description}</p>
-              
-              <div className="flex gap-4">
-                {proj.codeLink && (
-                    <a className="font-label-caps text-label-caps text-primary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.codeLink} target="_blank" rel="noreferrer">
-                    {t.viewCode} <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                    </a>
-                )}
-                {proj.demoLink && (
-                  <a className="font-label-caps text-label-caps text-secondary flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href={proj.demoLink} target="_blank" rel="noreferrer">
-                    {t.viewLive} <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-                  </a>
-                )}
-              </div>
-              </div>
-            </div>
-          </Tilt>
-        ))}
-      </div>
+
+      {loadingFirebase ? (
+        <div className="flex justify-center items-center py-20">
+          <div className="w-10 h-10 rounded-full border-2 border-primary border-t-transparent animate-spin"></div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((proj, idx) => (
+            <ProjectCard key={proj.id || idx} proj={proj} t={t} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

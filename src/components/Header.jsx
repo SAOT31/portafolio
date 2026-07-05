@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useUISounds } from '../hooks/useSound';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
@@ -8,6 +9,22 @@ export const Header = () => {
   const { playClickSound } = useUISounds();
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language].nav;
+  const navigate = useNavigate();
+  const clickCountRef = useRef(0);
+  const clickTimerRef = useRef(null);
+
+  const handleLogoClick = () => {
+    clickCountRef.current += 1;
+    clearTimeout(clickTimerRef.current);
+    if (clickCountRef.current >= 5) {
+      clickCountRef.current = 0;
+      navigate('/login');
+    } else {
+      clickTimerRef.current = setTimeout(() => {
+        clickCountRef.current = 0;
+      }, 2000);
+    }
+  };
 
   useEffect(() => {
     // Check local storage or default to true
@@ -35,18 +52,36 @@ export const Header = () => {
       window.dispatchEvent(new Event('themeChanged'));
     }
   };
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    playClickSound();
+    if (window.location.hash !== '#/' && window.location.hash !== '') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full h-16 z-50 bg-surface/80 dark:bg-surface-container-lowest/80 backdrop-blur-md border-b border-white/10 dark:border-white/5 transition-all duration-300">
       <div className="flex justify-between items-center max-w-container-max mx-auto px-gutter w-full h-full">
-        <div className="font-display text-headline-md tracking-tighter text-on-surface dark:text-on-background">
+        <div
+          onClick={handleLogoClick}
+          className="font-display text-headline-md tracking-tighter text-on-surface dark:text-on-background cursor-default select-none"
+        >
           DevPortfolio.
         </div>
         <div className="hidden md:flex space-x-8">
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#home">Home</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#experience">{t.experience}</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#skills">{t.skills}</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#projects">{t.projects}</a>
-          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#contact">{t.contact}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#experience" onClick={(e) => handleNavClick(e, 'experience')}>{t.experience}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>{t.skills}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>{t.projects}</a>
+          <a className="hover-glow font-label-caps text-label-caps text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>{t.contact}</a>
         </div>
         <div className="flex items-center gap-4">
           <button 
